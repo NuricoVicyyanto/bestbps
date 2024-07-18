@@ -108,7 +108,7 @@
                                 </a>
                             </li>
                             <li class="menu-item">
-                                <a href="dashboards-crm.html" class="menu-link">
+                                <a href="{{ route('penilaian') }}" class="menu-link">
                                     <div data-i18n="Penilaian">Penilaian</div>
                                 </a>
                             </li>
@@ -131,7 +131,7 @@
                     </li>
 
                     <!-- Components -->
-                    <li class="menu-header small text-uppercase">
+                    {{-- <li class="menu-header small text-uppercase">
                         <span class="menu-header-text" data-i18n="Master">Master</span>
                     </li>
                     <!-- Cards -->
@@ -198,10 +198,10 @@
                                 </a>
                             </li>
                         </ul>
-                    </li>
+                    </li> --}}
 
                     <!-- Extended components -->
-                    <li class="menu-item">
+                    {{-- <li class="menu-item">
                         <a href="javascript:void(0)" class="menu-link menu-toggle">
                             <i class="menu-icon tf-icons ti ti-components"></i>
                             <div data-i18n="Extended UI">Extended UI</div>
@@ -280,10 +280,10 @@
                                 </a>
                             </li>
                         </ul>
-                    </li>
+                    </li> --}}
 
                     <!-- Icons -->
-                    <li class="menu-item">
+                    {{-- <li class="menu-item">
                         <a href="javascript:void(0)" class="menu-link menu-toggle">
                             <i class="menu-icon tf-icons ti ti-brand-tabler"></i>
                             <div data-i18n="Icons">Icons</div>
@@ -300,7 +300,7 @@
                                 </a>
                             </li>
                         </ul>
-                    </li>
+                    </li> --}}
 
                   
             </aside>
@@ -395,7 +395,7 @@
                             <!-- / Style Switcher-->
 
                             <!-- Quick links  -->
-                            <li class="nav-item dropdown-shortcuts navbar-dropdown dropdown me-2 me-xl-0">
+                            {{-- <li class="nav-item dropdown-shortcuts navbar-dropdown dropdown me-2 me-xl-0">
                                 <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
                                     data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
                                     <i class="ti ti-layout-grid-add ti-md"></i>
@@ -479,11 +479,11 @@
                                         </div>
                                     </div>
                                 </div>
-                            </li>
+                            </li> --}}
                             <!-- Quick links -->
 
                             <!-- Notification -->
-                            <li class="nav-item dropdown-notifications navbar-dropdown dropdown me-3 me-xl-1">
+                            {{-- <li class="nav-item dropdown-notifications navbar-dropdown dropdown me-3 me-xl-1">
                                 <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
                                     data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
                                     <i class="ti ti-bell ti-md"></i>
@@ -731,7 +731,7 @@
                                         </a>
                                     </li>
                                 </ul>
-                            </li>
+                            </li> --}}
                             <!--/ Notification -->
 
                             <!-- User -->

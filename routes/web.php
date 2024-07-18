@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Dashboard\DashboardController;
+use App\Http\Controllers\PenilaianController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 Route::middleware('auth')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard')->middleware('role:superadmin,admin,user');
+    Route::get('/penilaian', [PenilaianController::class, 'index'])->name('penilaian')->middleware('role:superadmin,admin,user');
     Route::get('/logout',[AuthController::class,'logout'])->name('logout');
 });
 

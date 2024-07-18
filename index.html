@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Penilaian</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+        }
+        .card-header {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+        }
+        .medal {
+            height: 40px;
+            margin-right: 5px;
+        }
+        .gold { filter: brightness(1.5); }
+        .silver { filter: brightness(0.8); }
+        .bronze { filter: brightness(0.5); }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card mb-4">
+                <div class="card-header">
+                    Form Penilaian
+                </div>
+                <div class="card-body">
+                    <form id="evaluationForm">
+                        <!-- Pertanyaan 1 -->
+                        <div class="form-group">
+                            <label for="serviceOriented" style="font-weight: bold;">1.1. Memahami dan memenuhi kebutuhan masyarakat</label>
+                            <input type="range" class="form-control-range" id="serviceOriented" name="serviceOriented" min="1" max="10" value="5" style="width: 100%;" onchange="updateValue('serviceOriented', 'serviceOrientedValue')">
+                            <span id="serviceOrientedValue" style="font-weight: bold; margin-left: 10px;">5</span>
+                            <p>
+                                <strong>Penjelasan:</strong><br>
+                                - Mengidentifikasi kebutuhan stakeholders secara proaktif dalam rangka memberikan pelayanan prima<br>
+                                - Turut serta dalam menyampaikan ragam data dan/atau informasi yang tersedia di BPS kepada stakeholders<br>
+                                - Memberikan pelayanan rekomendasi dan konsultasi statistik berdasarkan kebutuhan konsumen atau pengguna data
+                            </p>
+                        </div>
+
+                        <!-- Pertanyaan 2 -->
+                        <div class="form-group">
+                            <label for="accountable" style="font-weight: bold;">2. Akuntabel</label>
+                            <input type="range" class="form-control-range" id="accountable" name="accountable" min="1" max="10" value="5" style="width: 100%;" onchange="updateValue('accountable', 'accountableValue')">
+                            <span id="accountableValue" style="font-weight: bold; margin-left: 10px;">5</span>
+                            <p>
+                                <strong>Penjelasan:</strong><br>
+                                <em>2.1. Melaksanakan tugas dengan jujur, bertanggung jawab, cermat, disiplin dan berintegritas tinggi</em><br>
+                                - Melaksanakan pekerjaan dengan akuntabel baik teknis maupun administrasi;<br>
+                                - Bekerja sesuai SOP dan mengikuti jadwal yang sudah ditetapkan;<br>
+                                - Bersikap integritas dengan menolak perilaku yang tidak sesuai dengan aturan.<br><br>
+                                <em>2.2. Menggunakan kekayaan dan barang milik negara secara bertanggung jawab, efektif dan efisien</em><br>
+                                - Memanfaatkan sarana dan prasarana (barang milik negara) secara efektif, efisien, dan sesuai dengan peruntukannya;<br>
+                                - Memelihara sarana dan prasarana (barang milik negara) dengan baik;<br>
+                                - Menyadari hak pakai bukan hak milik atas sarana dan prasarana (barang milik negara).<br><br>
+                                <em>2.3. Tidak menyalahgunakan wewenang jabatan</em><br>
+                                - Melaksanakan tugas pokok dan fungsi sesuai aturan atau kebijakan yang berlaku;<br>
+                                - Tidak terlibat dalam praktik Korupsi, Kolusi dan Nepotisme (KKN);<br>
+                                - Tidak memberikan dan/atau meminta perlakuan khusus kepada siapapun.
+                            </p>
+                        </div>
+
+                        <!-- Pertanyaan 3 -->
+                        <div class="form-group">
+                            <label for="competent" style="font-weight: bold;">3. Kompeten</label>
+                            <input type="range" class="form-control-range" id="competent" name="competent" min="1" max="10" value="5" style="width: 100%;" onchange="updateValue('competent', 'competentValue')">
+                            <span id="competentValue" style="font-weight: bold; margin-left: 10px;">5</span>
+                            <p>
+                                <strong>Penjelasan:</strong><br>
+                                <em>3.1. Meningkatkan kompetensi diri untuk menjawab tantangan yang selalu berubah</em><br>
+                                - Meningkatkan kompetensi diri melalui pendidikan (formal/non formal/kursus/diklat) yang diselenggarakan baik secara daring maupun luring;<br>
+                                - Bertukar pikiran dan berdiskusi dengan berbagai pihak untuk meningkatkan kompetensi diri;<br>
+                                - Senang belajar dan berupaya mengikuti perkembangan terkini<br><br>
+                                <em>3.2. Membantu orang lain belajar</em><br>
+                                - Aktif mendorong dan membantu orang lain untuk senantiasa meningkatkan pengetahuan dan kemampuan;<br>
+                                - Gemar membagikan pengetahuan, pengalaman, dan hal-hal positif terkait dengan pembelajaran yang dapat meningkatkan kapasitas individu di sekitarnya;<br>
+                                - Menciptakan sarana dan lingkungan yang kondusif untuk belajar.<br><br>
+                                <em>3.3. Melaksanakan tugas dengan kualitas terbaik</em><br>
+                                - Melaksanakan tugas yang diberikan dengan hasil akhir yang maksimal;<br>
+                                - Menetapkan standar kualitas yang tinggi dalam penyelesaian pekerjaan;<br>
+                                - Menjaga dan meningkatkan kualitas hasil pekerjaan dengan melakukan evaluasi secara berkala dan sistematis.
+                            </p>
+                        </div>
+
+                        <!-- Pertanyaan 4 -->
+                        <div class="form-group">
+                            <label for="harmonious" style="font-weight: bold;">4. Harmonis</label>
+                            <input type="range" class="form-control-range" id="harmonious" name="harmonious" min="1" max="10" value="5" style="width: 100%;" onchange="updateValue('harmonious', 'harmoniousValue')">
+                            <span id="harmoniousValue" style="font-weight: bold; margin-left: 10px;">5</span>
+                            <p>
+                                <strong>Penjelasan:</strong><br>
+                                <em>4.1. Menghargai setiap orang apapun latar belakangnya</em><br>
+                                - Menerima saran dan masukan dari siapapun tanpa melihat latar belakang jabatan, serta mengutamakan musyawarah mufakat;<br>
+                                - Memberikan apresiasi terhadap hasil kerja anggota tim ataupun rekan kerja yang lain;<br>
+                                - Menjaga sikap dan berlaku sopan santun terhadap siapa pun dalam pergaulan sosial baik di dalam kantor maupun di lingkungan sekitar, termasuk di media sosial<br><br>
+                                <em>4.2. Suka menolong orang lain</em><br>
+                                - Saling membantu dalam penyelesaian pekerjaan dan memberikan solusi atas kesulitan rekan kerja yang lain;<br>
+                                - Menunjukkan kepedulian dan empati terhadap rekan kerja, atasan, atau bawahan ketika mengalami kesulitan;<br>
+                                - Memberikan bantuan materi maupun non materi bagi rekan kerja yang terkena musibah dan kesulitan lainnya<br><br>
+                                <em>4.3. Menbangun lingkungan kerja yang kondusif</em><br>
+                                - Mengembangkan sikap toleransi dan menghargai keanekaragaman budaya serta keyakinan dalam kehidupan sehari-hari baik di lingkungan kerja ataupun dalam bermasyarakat;<br>
+                                - Menjaga hubungan baik dengan rekan kerja, atasan, bawahan dan stakeholders dengan menerapkan senyum, salam, dan sapa;<br>
+                                - Membuat suasana kantor yang nyaman.
+                            </p>
+                        </div>
+
+                        <!-- Pertanyaan 5 -->
+                        <div class="form-group">
+                            <label for="loyal" style="font-weight: bold;">5. Loyal</label>
+                            <input type="range" class="form-control-range" id="loyal" name="loyal" min="1" max="10" value="5" style="width: 100%;" onchange="updateValue('loyal', 'loyalValue')">
+                            <span id="loyalValue" style="font-weight: bold; margin-left: 10px;">5</span>
+                            <p>
+                                <strong>Penjelasan:</strong><br>
+                                <em>5.1. Memegang teguh ideologi Pancasila, UUD 1945 dan setia kepada NKRI serta pemerintahan yang sah</em><br>
+                                - Menghayati dan mengamalkan nilai-nilai Pancasila dan Undang-Undang Dasar dalam kehidupan sehari-hari (di rumah, kantor, dan aktivitas sosial);<br>
+                                - Setia dan taat kepada Negara Kesatuan Republik Indonesia;<br>
+                                - Menjaga kehormatan dan kerahasiaan bangsa dan negara Indonesia dimanapun berada.<br><br>
+                                <em>5.2. Menjaga nama baik sesama ASN, pimpinan, instansi, dan negara</em><br>
+                                - Menjadi contoh keteladanan yang baik (role model) dalam masyarakat;<br>
+                                - Menaati kode etik ASN dan peraturan yang berlaku dimanapun berada serta menjaga nama baik organisasi;<br>
+                                - Bijak dalam melakukan aktivitas di sosial media.<br><br>
+                                <em>5.3. Menjaga rahasia jabatan dan negara</em><br>
+                                - Memegang teguh rahasia jabatan dan negara;<br>
+                                - Bersikap amanah;<br>
+                                - Berhati-hati dalam berbicara dan bersikap.
+                            </p>
+                        </div>
+
+                        <!-- Pertanyaan 6 -->
+                        <div class="form-group">
+                            <label for="adaptive" style="font-weight: bold;">6. Adaptif</label>
+                            <input type="range" class="form-control-range" id="adaptive" name="adaptive" min="1" max="10" value="5" style="width: 100%;" onchange="updateValue('adaptive', 'adaptiveValue')">
+                            <span id="adaptiveValue" style="font-weight: bold; margin-left: 10px;">5</span>
+                            <p>
+                                <strong>Penjelasan:</strong><br>
+                                <em>6.1. Cepat menyesuaikan diri menghadapi perubahan</em><br>
+                                - Cepat beradaptasi terhadap tuntutan perubahan dalam organisasi;<br>
+                                - Bersikap agile dan sigap menanggapi perubahan yang terjadi;<br>
+                                - Segera mengubah pola pikir dan cara kerja sesuai tuntutan perubahan.<br><br>
+                                <em>6.2. Terus berinovasi dan mengembangkan kreativitas</em><br>
+                                - Tidak terpaku pada pola lama dan berani mencoba hal baru untuk mendapatkan hasil kerja yang lebih baik;<br>
+                                - Mengembangkan ide/cara baru dalam menyelesaikan tugas/pekerjaan agar lebih efektif dan efisien;<br>
+                                - Memanfaatkan berbagai media dalam mengembangkan kreativitas.<br><br>
+                                <em>6.3. Bertindak proaktif</em><br>
+                                - Secara mandiri mampu berkinerja baik tanpa menunggu perintah;<br>
+                                - Gesit dalam mengambil inisiatif tindakan;<br>
+                                - Mampu melihat peluang untuk kinerja yang lebih baik.
+                            </p>
+                        </div>
+
+                        <!-- Pertanyaan 7 -->
+                        <div class="form-group">
+                            <label for="collaborative" style="font-weight: bold;">7. Kolaboratif</label>
+                            <input type="range" class="form-control-range" id="collaborative" name="collaborative" min="1" max="10" value="5" style="width: 100%;" onchange="updateValue('collaborative', 'collaborativeValue')">
+                            <span id="collaborativeValue" style="font-weight: bold; margin-left: 10px;">5</span>
+                            <p>
+                                <strong>Penjelasan:</strong><br>
+                                <em>7.1. Memberi kesempatan kepada berbagai pihak untuk berkontribusi</em><br>
+                                - Pendelegasian tugas dan tanggung jawab kepada seluruh anggota tim kerja sesuai dengan proporsi dan kompetensi masing-masing;<br>
+                                - Mendukung pelaksanaan diskusi kelompok dalam menyelesaikan tugas organisasi;<br>
+                                - Memberikan kesempatan semua anggota tim ikut berpartisipasi dalam meningkatkan pencapaian tujuan organisasi.<br><br>
+                                <em>7.2. Terbuka dalam bekerjasama untuk menghasilkan nilai tambah</em><br>
+                                - Menjalin komunikasi dengan berbagai pihak dalam menjalankan tugas dan program kerja untuk peningkatan kinerja organisasi;<br>
+                                - Melakukan evaluasi secara bersama agar pencapaian tujuan organisasi lebih efektif dan efisien di masa mendatang;<br>
+                                - Bersedia melakukan pekerjaan secara bersama-sama untuk mencapai tujuan organisasi (tidak silo).<br><br>
+                                <em>7.3. Menggerakkan pemanfaatan berbagai sumber daya untuk tujuan bersama</em><br>
+                                - Menginventarisir seluruh sumber daya yang ada agar dapat dimanfaatkan untuk peningkatan tujuan organisasi;<br>
+                                - Cermat melihat semua potensi yang ada dalam lingkungan kerja dan dimanfaatkan untuk kemajuan organisasi;<br>
+                                - Mengembangkan dan meningkatkan kapabilitas SDM yang ada untuk meningkatkan capaian organisasi.
+                            </p>
+                        </div>
+
+                        <div class="form-group text-center">
+                            <button type="button" class="btn btn-primary" onclick="submitEvaluation()">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-header">
+                    Hasil Penilaian
+                </div>
+                <div class="card-body">
+                    <div id="evaluationResult" style="text-align: center;">
+                        <h5>Belum ada hasil penilaian.</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function updateValue(inputId, outputId) {
+        const value = document.getElementById(inputId).value;
+        document.getElementById(outputId).textContent = value;
+    }
+
+    function submitEvaluation() {
+        // Retrieve values from form
+        const formData = new FormData(document.getElementById('evaluationForm'));
+        let totalScore = 0;
+
+        // Calculate total score
+        for (const value of formData.values()) {
+            totalScore += parseInt(value);
+        }
+
+        // Determine medal based on total score
+        let medalIcon = '';
+        if (totalScore >= 60) {
+            medalIcon = '<img src="gold_medal.png" class="medal gold" alt="Gold Medal">';
+        } else if (totalScore >= 40) {
+            medalIcon = '<img src="silver_medal.png" class="medal silver" alt="Silver Medal">';
+        } else if (totalScore >= 20) {
+            medalIcon = '<img src="bronze_medal.png" class="medal bronze" alt="Bronze Medal">';
+        }
+
+        // Display result
+        const evaluationResult = document.getElementById('evaluationResult');
+        evaluationResult.innerHTML = `
+            <h5>Hasil Penilaian:</h5>
+            <p>Total Skor: ${totalScore}</p>
+            <p>${medalIcon}</p>
+        `;
+    }
+</script>
+
+</body>
+</html>
